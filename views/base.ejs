@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+    <div class="jumbotron text-center">
+        <div class="container">
+            <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Meal</th>
+                  <th scope="col">Attendence</th>
+                </tr>
+              </thead>
+              <tbody>
+            <% attendances.attendance.map(function(user){ %>
+                        <tr>
+                            <th scope="row"><%=user.date%></th>
+                            <td><%=user.time%></td>
+                            <td><%=user.att%></td>
+                            
+                          </tr>
+                <% }) %>
+            </tbody>
+        </table>
+
+                    <hr>
+
+                    <a class="btn btn-dark btn-lg" href="/submit" role="button">Apply Leave</a>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
